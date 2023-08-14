@@ -47,6 +47,7 @@ window.onload = function() {
 			'icon-puzzle' : '&#xe026;',
 			'icon-basket' : '&#xe027;',
 			'icon-envelope' : '&#xe028;',
+			'icon-utensils': '&#xe179;',
 			'icon-streetsign' : '&#xe029;',
 			'icon-telescope' : '&#xe02a;',
 			'icon-gears' : '&#xe02b;',
