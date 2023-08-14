@@ -436,8 +436,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <h3>What are you waiting for?</h3>
-                <p>We would greatly appreciate if you could RSVP before 1st of November '17</p>
+                <h3>Rückmeldung</h3>
+                <p> Bitte gebt uns über das folgende Formular eine Rückmeldung bis zum 30. November 2023. </p>
                 <form id="rsvp-form" class="rsvp-form"
                       action=""
                       method="POST">
@@ -451,8 +451,8 @@
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-envelope"></i><input type="email" name="E-Mail" class=""
-                                                                     placeholder="deine.email@domain.de"
+                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
+                                                                     placeholder="E-Mail Adresse"
                                                                      required>
                             </div>
                         </div>
@@ -460,35 +460,49 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="Anzahl Personen" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Partner/in und Kinder"
+                                <i class="fa fa-users"></i><input type="number" name="number" class="" min="0"
+                                                                  max="6"
+                                                                  placeholder="Anzahl Personen"
                                                                   required>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="rooms" id="invite_code"
+                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
                                                                 class="" min="0"
-                                                                placeholder="0"
+                                                                placeholder="Code siehe Einladung"
                                                                 required>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 col-sm-6">
+                        <div class="col-md-11 col-sm-11">
                             <div class="form-input-group">
-                                <i class="fa fa-meal"></i><input type="name" name="meal" class=""
-                                                                  placeholder="1x Vegetarisch und Fisch"
-                                                                  optional>
-                            </div>
+                                <i class="fa-solid fa-utensils"></i><input type="name" name="meal" class=""
+                                                                    placeholder="Allergien und Unverträglichkeiten"
+                                                                    required>                                   
+                            </div>                                           
                         </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="Einladungs-Code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Siehe Einladung"
-                                                                required>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-11 col-sm-11">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="feedback" id="rsvp1" value="Sektempfang + Hirsch" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                Ich komme zum Sektempfang am Standesamt und zur Feier. 
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="feedback" id="rsvp2" value="Hirsch">
+                                <label class="form-check-label" for="exampleRadios1">
+                                Ich komme nur zur Feier.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="feedback" id="rsvp3" value="Kommt nicht">
+                                <label class="form-check-label" for="exampleRadios1">
+                                Ich kann leider nicht kommen.
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -496,8 +510,7 @@
                         <div class="col-md-12" id="alert-wrapper"></div>
                     </div>
                     <button class="btn-fill rsvp-btn">
-                        Yes,
-                        that's me!
+                        Absenden
                     </button>
                 </form>
             </div>
