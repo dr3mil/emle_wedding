@@ -184,23 +184,23 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Ram and Antara's Wedding",
+            title: "Hochzeit Lena und Emil",
 
             // Event start date
-            start: new Date('Nov 27, 2017 10:00'),
+            start: new Date('May 18, 2024 11:00'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Nov 29, 2017 00:00'),
+            end: new Date('May 19, 2024 02:00'),
 
             // Event Address
-            address: 'ITC Fortune Park Hotel, Kolkata',
+            address: 'Dorfgasthof Hirsch, Urlau, 88299 Leutkirch im Allgäu',
 
             // Event Description
-            description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Amit Roy at +91 9876543210."
+            description: "Wir freuen uns auf Euer Kommen an diesem besonderen Tag. Für alle Fragen könnt ihr euch jederzeit an info@lena-emil-heiraten.de wenden."
         }
     });
 
@@ -217,7 +217,7 @@ $(document).ready(function () {
         //if (MD5($('#invite_code').val()) !== '15f59a195dda7dfb4e803b1ab432477e') {
         //    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         //} else {
-        $.post('https://script.google.com/macros/s/AKfycbyqm_CsLBeIS1fME6KFrs9Vr_BkiZeDyU5S-tkF4-PkGUzevNcW_BSfMQ6F3GFmZ4DE0w/exec', data)
+        $.post('https://script.google.com/macros/s/AKfycbxwrRGcqazHXkLgknLTV84P67CMsNR81WahMmsb-Aq9rztYLcC9DP9Zz2DjZzrfKYCS0g/exec', data)
             .done(function (data) {
                 console.log(data);
                 if (data.result === "error") {
@@ -234,14 +234,51 @@ $(document).ready(function () {
         //}
     });
 
+    /********************** Login **********************/
+    $('#login-form').on('submit-log', function (e) {
+        e.preventDefault();
+        var data = $(this).serialize();
+
+        $('#alert-wrapper2').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+
+        //if (MD5($('#invite_code').val()) !== '15f59a195dda7dfb4e803b1ab432477e') {
+        //    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
+        //} else {
+        $.post('https://script.google.com/macros/s/AKfycbxV5z1tjAzgmeftfKTcXVROmqj6G-gcLMYEFQ29GyVCB7EhI_QXI-ISKohsumTWHGOc/exec', data)
+            .done(function (data) {
+                console.log(data);
+                if (data.result === "error") {
+                    $('#alert-wrapper2').html(alert_markup('danger', data.message));
+                } else {
+                    $('#alert-wrapper2').html('');
+                    $('#rsvp-modal').modal('show');
+                }
+            })
+            .fail(function (data) {
+                console.log(data);
+                $('#alert-wrapper2').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+            });
+        //}
+    });
+    
 });
+
 
 /********************** Extras **********************/
 
+// Login page
+function openTheForm() {
+    document.getElementById("popupForm").style.display = "block";
+  }
+  
+  function closeTheForm() {
+    document.getElementById("popupForm").style.display = "none";
+  }
+
 // Google map
-function initMap() {
-    var location = {lat: 22.5932759, lng: 88.27027720000001};
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+function initMap() { 
+    var location = {lat: 47.779898, lng: 10.041251};
+    var map2 = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: location,
         scrollwheel: false
@@ -249,13 +286,13 @@ function initMap() {
 
     var marker = new google.maps.Marker({
         position: location,
-        map: map
+        map: map2
     });
 }
 
-function initBBSRMap() {
-    var la_fiesta = {lat: 20.305826, lng: 85.85480189999998};
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+function initBBSRMap() { 
+    var la_fiesta = {lat: 47.826658, lng: 10.0242516};
+    var map = new google.maps.Map(document.getElementById('map-canvas-right'), {
         zoom: 15,
         center: la_fiesta,
         scrollwheel: false
@@ -490,3 +527,5 @@ var MD5 = function (string) {
 
     return temp.toLowerCase();
 };
+
+

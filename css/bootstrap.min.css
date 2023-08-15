@@ -158,6 +158,13 @@ input[type=submit] {
     cursor: pointer
 }
 
+html input[type=button],
+input[type=reset],
+input[type=submit-log] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+
 button[disabled],
 html input[disabled] {
     cursor: default

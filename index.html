@@ -84,7 +84,7 @@
                                 <li class="hidden-sm hidden-xs"><a href="#video-bg">Event Location</a></li>
                             </ul>
                             <ul class="member-actions">
-                                <li><a href="#map" class="login">Hotel</a></li>
+                                <li><a href="#hotels" class="login">Hotel</a></li>
                                 <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
                             </ul>
                         </nav>
@@ -123,7 +123,6 @@
                     <h3>Wir heiraten!</h3>
                     <p>Die Hochzeit findet am 18. Mai 2024 statt und wir freuen uns Euch als Gäste begrüßen zu dürfen.
                     </p>
-                    <div class="share-bar"></div>
                 </div>
             </div>
         </div>
@@ -133,7 +132,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h3 class="header">Ablauf</h3>
+                    <h3 class="header">Story</h3>
                 </div>
             </div>
             <div class="row">
@@ -301,10 +300,12 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h3 class="header">Engagement Pics</h3>
+                    <h3 class="header">Fotos</h3>
+                    <p>Wir werden nach der Veranstaltungen alle Fotos über einen Link zur Verfügung stellen. 
+                    </p>
                 </div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-2">
                     <a class="fancybox" rel="group" href="img/eng_pics/_RFX2942-lg.jpg">
                         <div class="img-wrap">
@@ -366,7 +367,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="container">
             <div class="row hidden-lg hidden-md hidden-xs">
                 <div class="col-xs-12 section-border section-padding"></div>
@@ -384,19 +385,19 @@
 
     <section id="video-bg" class="hidden-sm hidden-xs">
         <div id="bgndVideo" class="player"
-            data-property="{videoURL:'https://youtu.be/9giqL1H6yRs',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:80, stopAt:259, opacity:1}">
+            data-property="{videoURL:'https://www.youtube.com/watch?v=q43nxJ1jY_M',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:24, stopAt:55, opacity:1}">
         </div>
         <div id="video-content">
-            <h5>Kolkata</h5>
-            <p>City of joy</p>
+            <h5>Stadel im Historischen Dorfgasthof Hirsch</h5>
+            <p>Urlau bei Leutkirch im Allgäu</p>
         </div>
     </section>
 
-    <section id="map" class="section-padding">
-        <div class="text-center">
+    <section id="map2" class="section-padding">
+        <!-- <div class="text-center">
             <h3>How do I get there?</h3>
             <p>It's way easier than you think!</p>
-        </div>
+        </div> -->
         <div id="map-canvas"></div>
         <div id="map-content-wrapper" class="container pointer-events-none">
             <div class="row">
@@ -408,31 +409,64 @@
                     </div>
                     <div id="map-content" class="pointer-events-auto">
                         <div class="row">
-                            <div class="col-md-6">
-                                <h5>ITC Fortune Park</h5>
-                                <p>Kona Expressway, Howrah, West Bengal 711403, India</p>
+                            <div class="col-md-6 text-center">
+                                <h5>Hirschstadl Urlau</h5>
+                                <p>Unterer Dorfweg 4, 88299 Leutkirch im Allgäu</p>
                             </div>
-                            <div class="col-md-6">
+                            <!-- <div class="col-md-6">
                                 <h5>Mr. Amit Roy</h5>
                                 <p><i class="fa fa-mobile"></i> <a href="tel://+919412345678">+91 9412345678</a><br>
                                     <i class="fa fa-mobile"></i> <a href="tel://+917123456789">+91 7123456789</a>
                                 </p>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="row text-center">
                             <div class="col-md-6" style="padding: 5px;">
-                                <a class="btn btn-fill btn-small"
-                                    href="https://m.uber.com/ul/?action=setPickup&client_id=Yh7Dl6SjB56RY2JuuZF8ttVa6ryFV78W&pickup=my_location&dropoff[formatted_address]=Fortune%20Park%20Panchwati%20-%20Hotels%20in%20Kolkata%2C%20Howrah%2C%20West%20Bengal%2C%20India&dropoff[latitude]=22.593276&dropoff[longitude]=88.270277"><i
-                                        class="fa fa-taxi"></i>&nbsp;&nbsp;Book Uber</a>
+                                <a class="btn btn-fill btn-small" 
+                                    href="https://www.google.com/maps/dir//Historischer+Dorfgasthof+Hirsch+Urlau,+Unterer+Dorfweg,+Leutkirch+im+Allg%C3%A4u/"><i
+                                        class="fa fa-taxi"></i>&nbsp;&nbsp;Navigation</a>
                             </div>
                             <div class="col-md-6" style="padding: 5px;">
                                 <a class="btn btn-accent btn-small" id="btn-show-map"><i
-                                        class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
-                                    map</a>
+                                        class="fa fa-map-marker"></i>&nbsp;&nbsp;Karte anzeigen</a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hotels" class="hotels section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center addmargintop">
+                    <h3>Empfehlungen für Unterkünfte</h3>
+                    <p>
+                        Das Allgäuer Genusshotel (unmittelbar neben dem Hochzeits-Stadel),<br> bietet ein bereits reserviertes Kontingent an Übernachtungsmöglichkeiten, welches direkt von Euch gebucht werden kann. <br> Stichwort: Lena & Emil
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="col-md-6 col-sm-6">
+                        <p><strong>Allgäuer Genusshotel</strong><br>
+                            (hier übernachten wir)<br>
+                            <a href="https://allgaeuer-genusshotel.de/" target="_blank">allgaeuer-genusshotel.de</a>
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <p><strong>Center Parcs Allgäu</strong><br>
+                            (ungefähr 2 km entfernt) <br>
+                            <a href="https://www.centerparcs.de/de-de/deutschland/fp_AG_ferienpark-park-allgaeu" target="_blank">centerparcsallgaeu.de</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row hidden-lg hidden-md hidden-xs">
+                <div class="col-xs-12 section-border section-padding"></div>
             </div>
         </div>
     </section>
@@ -484,15 +518,15 @@
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
-                                    <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                        class="" min="0" placeholder="Code siehe Einladung" required>
+                                    <i class="fa fa-key"></i><input name="invite_code" id="invite_code"
+                                        class="" placeholder="Code siehe Einladung" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
                                 <div class="form-input-group">
-                                    <i class="fa fa-cutlery"></i><input type="name" name="meal" class=""
+                                    <i class="fa fa-cutlery"></i><input name="meal" class=""
                                         placeholder="Allergien und Unverträglichkeiten" required>
                                 </div>
                             </div>
@@ -537,6 +571,14 @@
             <div class="row">
                 <div class="col-sm-12 text-center content">
                     <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
+                    <h5>Lena & Emil</h5>
+                    <p><i class="fa fa-mobile"></i> <a href="tel://+49xxx">+49 xxx</a><br>
+                        <i class="fa fa-envelope-o"></i> <a
+                            href="mailto:info@lena-emil-heiraten.de">info@lena-emil-heiraten.de</a>
+                    </p>
+                    <h5>Trauzeugin Anja</h5>
+                    <h5>Trauzeuge Florian</h5>
+                    <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
                     <p>Crafted by Emil with lots of <span class="fa fa-heart pulse2"></span> for Lena</p>
                 </div>
             </div>
@@ -551,7 +593,7 @@
     <script src="js/vendor/ouical.js"></script>
     <script src="js/scripts.min.js"></script>
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeEa9Hm2QZ7iLdq29EwuMfzUMoNk0BEXA&callback=initMap"></script>
     <!-- Google Analytics -->
     <script>
         (function (i, s, o, g, r, a, m) {

@@ -915,10 +915,12 @@ Google map
 /* ==========================================================================
 RSVP form
 ========================================================================== */
+.login,
 .rsvp {
   padding-bottom: 140px;
-
+  .login-form,
   .rsvp-form {
+    .login-btn,
     .rsvp-btn {
       padding: 15px 0;
       border-radius: 3px;
