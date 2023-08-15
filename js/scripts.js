@@ -278,6 +278,8 @@ function openTheForm() {
 // Google map
 function initMap() { 
     var location = {lat: 47.779898, lng: 10.041251};
+    var location2 = {lat: 47.826479, lng: 10.0244880};
+
     var map2 = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: location,
@@ -286,6 +288,11 @@ function initMap() {
 
     var marker = new google.maps.Marker({
         position: location,
+        map: map2
+    });
+
+    var marker2 = new google.maps.Marker({
+        position: location2,
         map: map2
     });
 }
