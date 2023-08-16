@@ -5,7 +5,8 @@
   "main": "npmfile.js",
   "scripts": {
     "gulp": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postbuild": "pagecrypt index.html index_encr.html password"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^5.0.0",
     "gulp-uglify": "^3.0.2",
+    "pagecrypt": "^6.1.1",
     "sass": "^1.37.0"
   },
   "dependencies": {
