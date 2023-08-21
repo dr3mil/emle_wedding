@@ -70,6 +70,8 @@ you can use the generic selector below, but it's slower:
 	.icon-puzzle,
 	.icon-basket,
 	.icon-envelope,
+	.icon-bed,
+	.icon-music,
 	.icon-utensils,
 	.icon-streetsign,
 	.icon-telescope,
@@ -263,6 +265,9 @@ you can use the generic selector below, but it's slower:
 }
 .icon-envelope:before {
 	content: "\e028";
+}
+.icon-child-friendly:before {
+	content: "\eb42";
 }
 .icon-utensils:before {
 	content: "\e179";

@@ -1147,6 +1147,11 @@ th {
     content: "\e200"
 }
 
+.glyphicon-bed:before {
+    content: "\e219"
+}
+
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
