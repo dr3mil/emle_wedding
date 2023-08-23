@@ -217,7 +217,7 @@ $(document).ready(function () {
         //if (MD5($('#invite_code').val()) !== '15f59a195dda7dfb4e803b1ab432477e') {
         //    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         //} else {
-        $.post('https://script.google.com/macros/s/AKfycbxwrRGcqazHXkLgknLTV84P67CMsNR81WahMmsb-Aq9rztYLcC9DP9Zz2DjZzrfKYCS0g/exec', data)
+        $.post('https://script.google.com/macros/s/AKfycbxx4NWSWwy4hIHaIhkRJXSkwG2GQPxuG7dz_o0MLuwQDYw9NJ3XBALTO0O8msQ3VanVIQ/exec', data)
             .done(function (data) {
                 console.log(data);
                 if (data.result === "error") {
@@ -232,35 +232,7 @@ $(document).ready(function () {
                 $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
             });
         //}
-    });
-
-    /********************** Login **********************/
-    $('#login-form').on('submit-log', function (e) {
-        e.preventDefault();
-        var data = $(this).serialize();
-
-        $('#alert-wrapper2').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
-
-        //if (MD5($('#invite_code').val()) !== '15f59a195dda7dfb4e803b1ab432477e') {
-        //    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
-        //} else {
-        $.post('https://script.google.com/macros/s/AKfycbxV5z1tjAzgmeftfKTcXVROmqj6G-gcLMYEFQ29GyVCB7EhI_QXI-ISKohsumTWHGOc/exec', data)
-            .done(function (data) {
-                console.log(data);
-                if (data.result === "error") {
-                    $('#alert-wrapper2').html(alert_markup('danger', data.message));
-                } else {
-                    $('#alert-wrapper2').html('');
-                    $('#rsvp-modal').modal('show');
-                }
-            })
-            .fail(function (data) {
-                console.log(data);
-                $('#alert-wrapper2').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
-            });
-        //}
-    });
-    
+    }); 
 });
 
 

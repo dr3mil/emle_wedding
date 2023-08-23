@@ -5,8 +5,7 @@
   "main": "npmfile.js",
   "scripts": {
     "gulp": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postbuild": "pagecrypt index_nopwd.html index.html password"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
