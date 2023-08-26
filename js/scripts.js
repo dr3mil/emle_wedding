@@ -253,7 +253,7 @@ function initMap() {
     var location2 = {lat: 47.826479, lng: 10.0244880};
 
     var map2 = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
+        zoom: 5,
         center: location,
         scrollwheel: false
     });
