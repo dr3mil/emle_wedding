@@ -250,10 +250,10 @@ function openTheForm() {
 // Google map
 function initMap() { 
     var location = {lat: 47.779898, lng: 10.041251};
-    var location2 = {lat: 47.826479, lng: 10.0244880};
+    var location2 = {lat: 47.8266689, lng: 10.0242490};
 
     var map2 = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 5,
+        zoom: 6,
         center: location,
         scrollwheel: false
     });
