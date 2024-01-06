@@ -339,7 +339,7 @@ Hero
 ========================================================================== */
 .hero {
   min-height: 750px;
-  background: url('../img/Lena_Emil_Deathvalley.JPG') center center;
+  background: url('../img/LundE_Ulm_Mauer.jpg') center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -374,6 +374,7 @@ Hero
   .hero-content img {
     width: 55%;
     margin-bottom: 12%;
+    background-color: rgba(255,255,255,0.0);
   }
 }
 
@@ -414,7 +415,8 @@ header {
   }
 
   .logo img {
-    height: 19px;
+    height: 40px;
+    //background-color: rgba(255,255,255,0.5);
   }
 
   ul.primary-nav {
