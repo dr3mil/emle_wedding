@@ -250,19 +250,22 @@ function openTheForm() {
 // Google map
 function initMap() { 
     var center_map = {lat: 47.81, lng: 10.03};
+    var center_map_kim = {lat: 47.7988, lng: 10.1612};
     var location = {lat: 47.779898, lng: 10.041251};
     var location1 = {lat: 47.8272522, lng: 10.0244166}; 
     var location2 = {lat: 47.8266689, lng: 10.0242490};
 
     var map2 = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 12,
-        center: center_map,
+        center: center_map_kim,
         scrollwheel: false
     });
 
-    var marker = new google.maps.Marker({
+    var marker = new google.maps.marker.AdvancedMarkerView({
         position: location,
-        map: map2
+        map: map2,
+        title: "Hirsch Stadel Urlau",
+
     });
 
     var marker1 = new google.maps.Marker({
