@@ -266,23 +266,23 @@ function initMap() {
         mapId: "DEMO_MAP_ID", 
     });
 
-    const marker0 = new google.maps.AdvancedMarkerElement({
+    const marker0 = new google.maps.Marker({
         position: location,
         map: map2,
-        title: "Hirsch Stadel Urlau"
+        //title: "Hirsch Stadel Urlau"
         //content: pinView.element,
     });
 
-    const marker1 = new google.maps.AdvancedMarkerElement({
+    const marker1 = new google.maps.Marker({
         position: location1,
         map: map2,
-        title: "Loc1"
+        //title: "Loc1"
     });
 
-    const marker2 = new google.maps.AdvancedMarkerElement({
+    const marker2 = new google.maps.Marker({
         position: location2,
         map: map2,
-        title: "Loc2"
+        //title: "Loc2"
     });
 
     // const pinView = new google.maps.marker.PinElement({
