@@ -251,8 +251,7 @@ function openTheForm() {
 function initMap() { 
 
     //const { Map } = await google.maps.importLibrary("maps");
-    //const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
-  
+    // const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
 
     var center_map = {lat: 47.81, lng: 10.03};
     var center_map_kim = {lat: 47.7988, lng: 10.1612};
@@ -267,30 +266,28 @@ function initMap() {
         mapId: "DEMO_MAP_ID", 
     });
 
-    // const pinView = new google.maps.marker.PinElement({
-    //      glyph: "1",
-    // });
-
-    const marker0 = new google.maps.marker.AdvancedMarkerElement({
-         position: location,
-         map: map2,
-         title: "Hirsch Stadel Urlau",
-         //content: pinView.element,
+    const marker0 = new google.maps.AdvancedMarkerElement({
+        position: location,
+        map: map2,
+        title: "Hirsch Stadel Urlau"
+        //content: pinView.element,
     });
 
-    const marker1 = new google.maps.marker.AdvancedMarkerElement({
+    const marker1 = new google.maps.AdvancedMarkerElement({
         position: location1,
         map: map2,
         title: "Loc1"
     });
 
-    var marker2 = new google.maps.marker.AdvancedMarkerElement({
+    const marker2 = new google.maps.AdvancedMarkerElement({
         position: location2,
         map: map2,
         title: "Loc2"
     });
 
-
+    // const pinView = new google.maps.marker.PinElement({
+    //      glyph: "1",
+    // });
 
     // Create an info window to share between markers.
     // const infoWindow = new google.maps.InfoWindow();
