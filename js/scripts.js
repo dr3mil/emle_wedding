@@ -262,32 +262,38 @@ function initMap() {
         mapId: "DEMO_MAP_ID", 
     });
 
-    const marker0 = new google.maps.marker.AdvancedMarkerElement({
-        position: location,
-        map: map2,
-        title: "loc1"
-    });
+    // const marker0 = new google.maps.marker.AdvancedMarkerElement({
+    //     position: location,
+    //     map: map2,
+    //     title: "loc1"
+    // });
 
-    var marker1 = new google.maps.Marker({
+    const marker1 = new google.maps.AdvancedMarkerElement({
         position: location1,
         map: map2
     });
 
-    var marker2 = new google.maps.Marker({
+    var marker2 = new google.maps.AdvancedMarkerElement({
         position: location2,
         map: map2
     });
+
+    const marker = new google.maps.marker.AdvancedMarkerView({
+         position: location,
+         map: map2,
+         title: "Hirsch Stadel Urlau",
+         content: pinView.element,
+    });
+
+    // Create an info window to share between markers.
+    // const infoWindow = new google.maps.InfoWindow();
+
 
     // const pinView = new google.maps.marker.PinView({
     //     glyph: "1",
     // });
 
-    // const marker = new google.maps.marker.AdvancedMarkerView({
-    //     position: location,
-    //     map: map2,
-    //     title: "Hirsch Stadel Urlau",
-    //     content: pinView.element,
-    // });
+
 
     // marker.addListener("click", ({ domEvent, latLng }) => {
     //     const { target } = domEvent;
