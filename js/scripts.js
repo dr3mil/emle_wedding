@@ -258,12 +258,14 @@ function initMap() {
     var map2 = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 12,
         center: center_map_kim,
-        scrollwheel: false
+        scrollwheel: false, 
+        mapId: "DEMO_MAP_ID", 
     });
 
-    var marker0 = new google.maps.Marker({
+    const marker0 = new google.maps.marker.AdvancedMarkerElement({
         position: location,
-        map: map2
+        map: map2,
+        title: "loc1"
     });
 
     var marker1 = new google.maps.Marker({
