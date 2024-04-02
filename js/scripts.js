@@ -278,6 +278,10 @@ function initMap() {
         map: map2
     });
 
+    const pinView = new google.maps.marker.PinView({
+         glyph: "1",
+    });
+
     const marker = new google.maps.marker.AdvancedMarkerView({
          position: location,
          map: map2,
@@ -287,13 +291,6 @@ function initMap() {
 
     // Create an info window to share between markers.
     // const infoWindow = new google.maps.InfoWindow();
-
-
-    // const pinView = new google.maps.marker.PinView({
-    //     glyph: "1",
-    // });
-
-
 
     // marker.addListener("click", ({ domEvent, latLng }) => {
     //     const { target } = domEvent;
