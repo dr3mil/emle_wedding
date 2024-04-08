@@ -269,6 +269,20 @@ function initMap() {
     const marker0 = new google.maps.Marker({
         position: location,
         map: map2,
+        icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 10,
+            fillColor: "#FF0000",
+            fillOpacity: 1,
+            strokeWeight: 2,
+            labelOrigin: new google.maps.Point(0, 0),
+            label: {
+                text: "1",
+                color: "#FFFFFF",
+                fontSize: "12px",
+                fontWeight: "bold"
+            }
+        }
         //title: "Hirsch Stadel Urlau"
         //content: pinView.element,
     });
