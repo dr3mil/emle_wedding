@@ -265,7 +265,7 @@ function initMap() {
         scrollwheel: false, 
         mapId: "DEMO_MAP_ID", 
     });
-
+    
     const marker0 = new google.maps.Marker({
         position: location,
         map: map2,
@@ -290,12 +290,14 @@ function initMap() {
     const marker1 = new google.maps.Marker({
         position: location1,
         map: map2,
+        label: "1",
         //title: "Loc1"
     });
 
     const marker2 = new google.maps.Marker({
         position: location2,
         map: map2,
+        label: "B",
         //title: "Loc2"
     });
 
