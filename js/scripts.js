@@ -258,6 +258,8 @@ function initMap() {
     var location = {lat: 47.779898, lng: 10.041251};
     var location1 = {lat: 47.8272522, lng: 10.0244166}; 
     var location2 = {lat: 47.8266689, lng: 10.0242490};
+    var P1 = {lat: 47.827654686400, lng: 10.0180007030493};
+    var P2 = {lat: 47.78075639603, lng: 10.0423107290839}; 
 
     var map2 = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 12,
@@ -270,23 +272,37 @@ function initMap() {
         position: location,
         map: map2,
         label: "3",
-        title: "Hirsch Stadel Urlau"
+        title: "Feier im Hirsch Stadel"
         //content: pinView.element,
     });
 
     const marker1 = new google.maps.Marker({
         position: location1,
         map: map2,
-        label: "1",
-        title: "Loc1"
+        label: "2",
+        title: "Sektempfang"
     });
 
     const marker2 = new google.maps.Marker({
         position: location2,
         map: map2,
-        label: "2",
-        title: "Loc2"
+        label: "1",
+        title: "Standesamt"
     });    
+
+    const marker3 = new google.maps.Marker({
+        position: P1,
+        map: map2,
+        label: "P1",
+        title: "Parkplatz für Sektempfang"
+    }); 
+    
+    const marker4 = new google.maps.Marker({
+        position: P2,
+        map: map2,
+        label: "P2",
+        title: "Parkplatz für Hirsch Stadel"
+    });
 
     // const pinView = new google.maps.marker.PinElement({
     //      glyph: "1",
