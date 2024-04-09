@@ -30,7 +30,10 @@
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.6",
     "animate.css": "^3.7.2",
+    "chokidar": "^3.6.0",
     "font-awesome": "^4.7.0",
+    "glob-parent": "^6.0.2",
+    "glob-stream": "^8.0.2",
     "gulp-cli": "^2.3.0",
     "waypoints": "^4.0.1"
   }
