@@ -8,7 +8,7 @@ window.onload = function() {
 	var icons = {
 			'icon-mobile' : '&#xe000;',
 			'icon-laptop' : '&#xe001;',
-			'icon-desktop' : '&#xe002;',
+			'icon-music' : '&#xe002;',
 			'icon-tablet' : '&#xe003;',
 			'icon-phone' : '&#xe004;',
 			'icon-document' : '&#xe005;',
@@ -47,6 +47,7 @@ window.onload = function() {
 			'icon-puzzle' : '&#xe026;',
 			'icon-basket' : '&#xe027;',
 			'icon-envelope' : '&#xe028;',
+			'icon-bed' : '&#xe219;',
 			'icon-utensils': '&#xe179;',
 			'icon-streetsign' : '&#xe029;',
 			'icon-telescope' : '&#xe02a;',

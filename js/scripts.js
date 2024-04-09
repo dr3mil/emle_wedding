@@ -217,7 +217,7 @@ $(document).ready(function () {
         //if (MD5($('#invite_code').val()) !== '15f59a195dda7dfb4e803b1ab432477e') {
         //    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         //} else {
-        $.post('https://script.google.com/macros/s/AKfycbxwrRGcqazHXkLgknLTV84P67CMsNR81WahMmsb-Aq9rztYLcC9DP9Zz2DjZzrfKYCS0g/exec', data)
+        $.post('https://script.google.com/macros/s/AKfycbwJTGA8-eiBUU4m3wTjDWWfFmQQcRIVeDTvD9sKm7tIEnJ-8FDxPuUQ8FOSDzsv1H_OFA/exec', data)
             .done(function (data) {
                 console.log(data);
                 if (data.result === "error") {
@@ -232,35 +232,7 @@ $(document).ready(function () {
                 $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
             });
         //}
-    });
-
-    /********************** Login **********************/
-    $('#login-form').on('submit-log', function (e) {
-        e.preventDefault();
-        var data = $(this).serialize();
-
-        $('#alert-wrapper2').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
-
-        //if (MD5($('#invite_code').val()) !== '15f59a195dda7dfb4e803b1ab432477e') {
-        //    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
-        //} else {
-        $.post('https://script.google.com/macros/s/AKfycbxV5z1tjAzgmeftfKTcXVROmqj6G-gcLMYEFQ29GyVCB7EhI_QXI-ISKohsumTWHGOc/exec', data)
-            .done(function (data) {
-                console.log(data);
-                if (data.result === "error") {
-                    $('#alert-wrapper2').html(alert_markup('danger', data.message));
-                } else {
-                    $('#alert-wrapper2').html('');
-                    $('#rsvp-modal').modal('show');
-                }
-            })
-            .fail(function (data) {
-                console.log(data);
-                $('#alert-wrapper2').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
-            });
-        //}
-    });
-    
+    }); 
 });
 
 
@@ -277,23 +249,82 @@ function openTheForm() {
 
 // Google map
 function initMap() { 
+
+    //const { Map } = await google.maps.importLibrary("maps");
+    // const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
+
+    var center_map = {lat: 47.81, lng: 10.03};
+    var center_map_kim = {lat: 47.7988, lng: 10.1612};
     var location = {lat: 47.779898, lng: 10.041251};
+    var location1 = {lat: 47.8272522, lng: 10.0244166}; 
+    var location2 = {lat: 47.8266689, lng: 10.0242490};
+    var P1 = {lat: 47.827654686400, lng: 10.0180007030493};
+    var P2 = {lat: 47.78075639603, lng: 10.0423107290839}; 
+
     var map2 = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
-        center: location,
-        scrollwheel: false
+        zoom: 12,
+        center: center_map_kim,
+        scrollwheel: false, 
+        mapId: "DEMO_MAP_ID", 
+    });
+    
+    const marker0 = new google.maps.Marker({
+        position: location,
+        map: map2,
+        label: "3",
+        title: "Feier im Hirsch Stadel"
+        //content: pinView.element,
     });
 
-    var marker = new google.maps.Marker({
-        position: location,
-        map: map2
+    const marker1 = new google.maps.Marker({
+        position: location1,
+        map: map2,
+        label: "2",
+        title: "Sektempfang"
     });
+
+    const marker2 = new google.maps.Marker({
+        position: location2,
+        map: map2,
+        label: "1",
+        title: "Standesamt"
+    });    
+
+    const marker3 = new google.maps.Marker({
+        position: P1,
+        map: map2,
+        label: "P1",
+        title: "Parkplatz für Sektempfang"
+    }); 
+    
+    const marker4 = new google.maps.Marker({
+        position: P2,
+        map: map2,
+        label: "P2",
+        title: "Parkplatz für Hirsch Stadel"
+    });
+
+    // const pinView = new google.maps.marker.PinElement({
+    //      glyph: "1",
+    // });
+
+    // Create an info window to share between markers.
+    // const infoWindow = new google.maps.InfoWindow();
+
+    // marker.addListener("click", ({ domEvent, latLng }) => {
+    //     const { target } = domEvent;
+  
+    //     infoWindow.close();
+    //     infoWindow.setContent(marker.title);
+    //     infoWindow.open(marker.map, marker);
+    // });
+
 }
 
 function initBBSRMap() { 
-    var la_fiesta = {lat: 47.826658, lng: 10.0242516};
+    var la_fiesta = {lat: 47.81, lng: 10.03};
     var map = new google.maps.Map(document.getElementById('map-canvas-right'), {
-        zoom: 15,
+        zoom: 12,
         center: la_fiesta,
         scrollwheel: false
     });

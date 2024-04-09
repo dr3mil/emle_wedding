@@ -63,7 +63,9 @@ ul li {
 }
 
 section .header {
+  border-top: 1px solid $keyline-color;
   padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .section-padding {
@@ -72,6 +74,31 @@ section .header {
 
 .section-border {
   border-bottom: 1px solid $keyline-color;
+}
+
+.to-top-wrapper {
+  font-size: 30px;
+  display: block;
+  cursor: pointer;
+  margin: -25px auto 50px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 1px solid $keyline-color;
+  background: #fff;
+}
+
+.to-top-wrapper .to-top {
+  display: block;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.to-top-wrapper .to-top:hover {
+  margin-top: -5px;
 }
 
 .tooltip {
@@ -312,7 +339,7 @@ Hero
 ========================================================================== */
 .hero {
   min-height: 750px;
-  background: url('../img/Lena_Emil_Deathvalley.JPG') center center;
+  background: url('../img/LundE_Ulm_Mauer.jpg') center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -341,12 +368,13 @@ Hero
   }
 
   .hero-content {
-    padding-top: 40%;
+    padding-top: 8%;
   }
 
   .hero-content img {
     width: 55%;
     margin-bottom: 12%;
+    background-color: rgba(255,255,255,0.0);
   }
 }
 
@@ -387,7 +415,8 @@ header {
   }
 
   .logo img {
-    height: 19px;
+    height: 40px;
+    //background-color: rgba(255,255,255,0.5);
   }
 
   ul.primary-nav {
@@ -845,13 +874,13 @@ Engagement Pics
 Embed video
 ========================================================================== */
 #video-bg {
-  height: 300px;
+  height: 500px;
 }
 
 #video-content {
   width: 100%;
   height: 100%;
-  padding-top: 100px;
+  padding-top: 150px;
   position: relative;
   background: rgba(17, 17, 17, 0.5);
   text-align: center;
@@ -859,13 +888,14 @@ Embed video
 
 #video-content h5 {
   color: #ffffff;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 300;
-  letter-spacing: 10px;
+  letter-spacing: 8px;
 }
 
 #video-content p {
   color: #ffffff;
+  font-size: 18px;
 }
 
 /* ==========================================================================
@@ -886,6 +916,7 @@ Google map
   margin-top: 40px;
   padding: 50px 60px;
   background: #fff;
+  opacity: 0.9;
   -webkit-transition: opacity 0.5s, visibility 0.6s, margin-top 0.5s;
   transition: opacity 0.5s, visibility 0.6s, margin-top 0.5s;
 }
@@ -957,6 +988,9 @@ RSVP form
 i.fa-user,
 i.fa-users,
 i.fa-envelope,
+i.fa-child,
+i.fa-bed,
+i.fa-music,
 i.fa-cutlery,
 .fa-key {
         font-size: 14px;
@@ -991,6 +1025,10 @@ i.fa-cutlery,
       input:-ms-input-placeholder {
         color: $form-placeholder;
       }
+    }
+
+    .form-input-group .overlay {
+      height: 110px;
     }
   }
 }
@@ -1045,4 +1083,65 @@ body.modal-open {
 
 .modal-body {
   padding: 25px;
+}
+
+/* ==========================================================================
+FAQs
+========================================================================== */
+
+details{
+  text-overflow: ""
+}
+
+details[open] summary ~ * {
+  animation: open 0.3s ease-in-out;
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary {
+  width: 100%;
+  padding: 1.0rem 0rem;
+  border-top: 1px solid rgb(200, 200, 200);
+  position: relative;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 300;
+  list-style: none;
+  padding-right: 2rem;
+}
+
+details summary:after {
+  content: "+";
+  color: black;
+  position: absolute;
+  font-size: 1.75rem;
+  line-height: 0;
+  right: 0.5rem;
+  top: 3rem;
+  font-weight: 1000;
+  transform-origin: center;
+  transition: 200ms linear;
+}
+details[open] summary:after {
+  transform: rotate(45deg);
+  font-size: 2.2rem;
+}
+details summary {
+  outline: 0;
+}
+details p {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+  padding-top: 1rem;
 }

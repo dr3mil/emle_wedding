@@ -18,8 +18,10 @@ _See [wedding.rampatra.com](http://wedding.rampatra.com/) for a demo. Use invite
 1. `$ git clone https://github.com/rampatra/wedding-website.git` - clone this project to your computer
 2. `$ cd wedding-website` - go inside the project directory
 3. `$ npm install` - install dependencies
-4. `$ gulp` - compile sass to css, minify js, etc.
-5. That's it, open `index.html` file on your browser by just double-clicking on it.
+4. `$ npm run gulp` - compile sass to css, minify js, etc.
+5. npx pagecrypt index_nopwd.html index.html password
+6. That's it, open `index.html` file on your browser by just double-clicking on it.
+
 
 # Documentation
 I have written a 
