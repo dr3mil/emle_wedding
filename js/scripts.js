@@ -254,7 +254,7 @@ function initMap() {
     // const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
 
     var center_map = {lat: 47.80675, lng: 10.0266}; 
-    var center_map_kim = {lat: 47.81, lng: 10.03};
+    var center_map_kim = {lat: 47.7965, lng: 10.1565};
     var location = {lat: 47.779898, lng: 10.041251};
     var location1 = {lat: 47.8272522, lng: 10.0244166}; 
     var location2 = {lat: 47.8266689, lng: 10.0242490};
@@ -262,7 +262,7 @@ function initMap() {
     var P3 = {lat: 47.78075639603, lng: 10.0423107290839}; 
 
     // Use center of map depending on device type
-    if (window.innerWidth > 500) {
+    if (window.innerWidth > 800) {
         center_map = center_map_kim;
     }
 
