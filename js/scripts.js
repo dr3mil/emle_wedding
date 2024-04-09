@@ -253,13 +253,13 @@ function initMap() {
     //const { Map } = await google.maps.importLibrary("maps");
     // const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
 
-    var center_map = {lat: 47.81, lng: 10.03};
-    var center_map_kim = {lat: 47.7988, lng: 10.1612};
+    var center_map = {lat: 47.80675, lng: 10.0266}; 
+    var center_map_kim = {lat: 47.81, lng: 10.03};
     var location = {lat: 47.779898, lng: 10.041251};
     var location1 = {lat: 47.8272522, lng: 10.0244166}; 
     var location2 = {lat: 47.8266689, lng: 10.0242490};
     var P1 = {lat: 47.827654686400, lng: 10.0180007030493};
-    var P2 = {lat: 47.78075639603, lng: 10.0423107290839}; 
+    var P3 = {lat: 47.78075639603, lng: 10.0423107290839}; 
 
     // Use center of map depending on device type
     if (window.innerWidth > 500) {
@@ -303,9 +303,9 @@ function initMap() {
     }); 
     
     const marker4 = new google.maps.Marker({
-        position: P2,
+        position: P3,
         map: map2,
-        label: "P2",
+        label: "P3",
         title: "Parkplatz für Hirsch Stadel"
     });
 
