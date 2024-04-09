@@ -261,9 +261,14 @@ function initMap() {
     var P1 = {lat: 47.827654686400, lng: 10.0180007030493};
     var P2 = {lat: 47.78075639603, lng: 10.0423107290839}; 
 
+    // Use center of map depending on device type
+    if (window.innerWidth > 500) {
+        center_map = center_map_kim;
+    }
+
     var map2 = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 12,
-        center: center_map_kim,
+        center: center_map,
         scrollwheel: false, 
         mapId: "DEMO_MAP_ID", 
     });
