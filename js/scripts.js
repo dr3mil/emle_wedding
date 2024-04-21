@@ -258,7 +258,7 @@ function initMap() {
     var location = {lat: 47.779898, lng: 10.041251};
     var location1 = {lat: 47.8272522, lng: 10.0244166}; 
     var location2 = {lat: 47.8266689, lng: 10.0242490};
-    var P1 = {lat: 47.827654686400, lng: 10.0180007030493};
+    var P1 = {lat: 47.82787217583, lng: 10.02422340337}; 
     var P3 = {lat: 47.78075639603, lng: 10.0423107290839}; 
 
     // Use center of map depending on device type
